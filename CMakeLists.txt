@@ -6,7 +6,11 @@ cmake_policy(SET CMP0104 OLD)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CXX_STANDARD 17)
 
+# in cmake version 3.18 there is CUDA_ARCHITCUTURE, so you can use that instead
 set(COMPUTE_CAPABILITY -gencode arch=compute_86,code=sm_86)
+set(CUDA_OPTIONS -lineinfo ${COMPUTE_CAPABILITY})
+
+message(${CUDA_OPTIONS})
 
 add_subdirectory(1-ArrayCopy/C++)
 add_subdirectory(1-ArrayCopy/CUDA)
