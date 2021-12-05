@@ -11,7 +11,7 @@
 #ifndef CUDATUTORIAL_DATAGENERATOR_H
 #define CUDATUTORIAL_DATAGENERATOR_H
 
-#include "../../../../../usr/include/c++/9/random"
+#include <random>
 
 template<typename itT>
 void genRandomData(itT begin, itT end){
